@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF-8">
+    <link = rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>DSproject</title>
+</head>
+
+<body>
+    <h1>Wine Quality Evaluator</h1>
+    <h1>Attributes</h1>
+    <div id = "form">
+        <div class = "login">
+            <form action = "{{ url_for('predict')}}" method = "post" >
+                <label>Fixed acidity: </label><input type = text placeholder = "e.g. 7" input name = "fa"/>
+                <br/><br/>       
+                <label>Volatile Acidity: </label><input type = text placeholder = "e.g. 0.3" input name ="va" />
+                <br/><br/>
+                <label>Citric Acid: </label><input type = text placeholder ="e.g. 0" input name = "ca" />
+                <br/><br/>
+                <label>Residual Sugar: </label><input type = text placeholder = "e.g. 1.5" input name ="rs" />
+                <br/><br/>
+                <label>Chlorides: </label><input type = text placeholder="e.g. .05" input name ="chlorides"/>
+                <br/><br/>
+                <label>Free Sulfur Dioxide: </label><input type = text placeholder ="e.g. 15" input name ="fsd"/>
+                <br/><br/>
+                <label>Total Sulfur Dioxide: </label><input type = text placeholder ="e.g. 30" input name ="tsd"/>
+                <br/><br/>
+                <label>Density: </label><input type = text placeholder = "e.g. .99" input name ="density"/>
+                <br/><br/>
+                <label>PH: </label><input type = text placeholder = "e.g. 3.5" input name = "ph"/>
+                <br/><br/>
+                <label>Sulphates: </label><input type = text placeholder = "e.g. .75" input name ="sulphates"/>
+                <br/><br/>
+                <label>Alcohol: </label><input type = text placeholder = "e.g. 14" input name ="alcohol"/>
+                <br/><br/>
+                <!--
+                <label>Score:</label><input type = text input name ="score"/>
+                <br/><br>
+                -->
+                <button type = 'submit' class ="btn btn-primary btn-block btn-large">Predict</button>
+            </form>
+
+            {{ prediction_text }}
+        </div>
+       
+
+        
+
+    
+</body>
+
+
+
+
+</html>
+
+

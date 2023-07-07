@@ -1,0 +1,31 @@
+
+h1 {
+    text-align: center;
+}
+
+#form {
+    padding-left: 15%;
+    font-size: 16px;
+    padding: 4px; 
+    border-radius: 10px;
+}
+
+label {
+    width: 300px;
+    display:inline-block;
+    text-align: center;
+
+}
+
+button{
+    width: 100%;
+}
+body {
+
+    border-style: solid;
+    border-radius:45px;
+    border-width: 30px;
+    border-color: #242570;
+    background-color: #dce0df;
+}
+
